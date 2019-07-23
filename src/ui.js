@@ -9,9 +9,16 @@ class UI {
     this.forState = "add";
   }
 
-  showAlert(msg) {
+  showAlert(msg, color) {
+    // reset bg color
+    ui.alertBox.style.background = "";
+    // add msg as text
     ui.alertBox.innerHTML = `<p>${msg.toUpperCase()}</p>`;
+    // slide into view
     ui.alertBox.style.top = "0%";
+    // change bg color
+    if (color) ui.alertBox.style.background = color;
+    // slide out of view
     setTimeout(() => {
       ui.alertBox.style.top = "-10%";
     }, 2000);
@@ -37,6 +44,9 @@ class UI {
     `;
     });
     this.post.innerHTML = output;
+    // clear input values
+    this.titleInput = document.querySelector("#title").value = "";
+    this.bodyInput = document.querySelector("#body").value = "";
   }
 }
 
