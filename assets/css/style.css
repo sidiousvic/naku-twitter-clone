@@ -1,5 +1,21 @@
+body {
+  font-family: Osaka !important;
+}
+
+nav {
+  font-family: Coyote !important;
+}
+
 .delete {
-  color: red;
+  color: #555;
+}
+
+.edit {
+  color: rgb(192, 90, 6);
+}
+
+h4 {
+  font-weight: 700 !important;
 }
 
 .alert {
@@ -9,7 +25,6 @@
   top: -10%;
   height: 10%;
   width: 100%;
-  background: red;
   z-index: 3 !important;
   transition: 0.5s;
   user-select: none;
@@ -24,4 +39,10 @@
   line-height: 100%;
   font-size: 3vh;
   font-weight: 700;
+}
+
+.bg-primary,
+button {
+  background-color: rgb(192, 90, 6) !important;
+  border: none !important;
 }
