@@ -1,0 +1,27 @@
+.delete {
+  color: red;
+}
+
+.alert {
+  position: absolute !important;
+  display: table;
+  text-align: center;
+  top: -10%;
+  height: 10%;
+  width: 100%;
+  background: red;
+  z-index: 3 !important;
+  transition: 0.5s;
+  user-select: none;
+  line-height: 100%;
+}
+
+.alert p {
+  margin: auto;
+  display: table-cell;
+  color: whitesmoke;
+  vertical-align: middle;
+  line-height: 100%;
+  font-size: 3vh;
+  font-weight: 700;
+}
