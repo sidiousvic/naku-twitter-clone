@@ -51,3 +51,6 @@ async function deletePost(e) {
     })
     .catch(err => console.log(err));
 }
+
+// 投稿は更新されました post updated
+// 投稿は編集されました post deleted
