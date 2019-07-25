@@ -44,6 +44,7 @@ class UI {
     `;
     });
     this.post.innerHTML = output;
+    
     // clear input values
     this.titleInput = document.querySelector("#title").value = "";
     this.bodyInput = document.querySelector("#body").value = "";
