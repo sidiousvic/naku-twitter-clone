@@ -1,10 +1,13 @@
 class UI {
   constructor() {
     this.post = document.querySelector("#posts");
+    this.card = document.querySelector("#post-card");
     this.titleInput = document.querySelector("#title");
     this.bodyInput = document.querySelector("#body");
     this.idInput = document.querySelector("#id");
     this.postSubmit = document.querySelector(".post-submit");
+    this.postUpdate = document.querySelector(".post-update");
+    this.cancelPostUpdate = document.querySelector(".cancel-post-update");
     this.alertBox = document.querySelector(".alert");
     this.forState = "add";
   }
@@ -34,20 +37,38 @@ class UI {
             <p class="card-text">${post.body}</p>
             <a href="#" class="edit card-link" data-id="${post.id}">
                 <i class="fa fa-pencil"></i>
-            <a/>
+            </a>
             &nbsp;&nbsp;
             <a href="#" class="delete card-link" data-id="${post.id}">
                 <i class="fa fa-remove"></i>
-            <a/>
+            </a>
           </div>
         </div>
     `;
     });
     this.post.innerHTML = output;
-    
+
     // clear input values
-    this.titleInput = document.querySelector("#title").value = "";
-    this.bodyInput = document.querySelector("#body").value = "";
+    this.titleInput.value = "";
+    this.bodyInput.value = "";
+  }
+
+  showEdit(data) {
+    this.titleInput.value = data.title;
+    this.bodyInput.value = data.body;
+    this.idInput.value = data.id;
+    this.postSubmit.style.display = "none";
+    this.postUpdate.style.display = "block";
+    this.cancelPostUpdate.style.display = "block";
+  }
+
+  clearEditState(data) {
+    this.titleInput.value = "";
+    this.bodyInput.value = "";
+    this.idInput.value = "";
+    this.postSubmit.style.display = "block";
+    this.postUpdate.style.display = "none";
+    this.cancelPostUpdate.style.display = "none";
   }
 }
 
